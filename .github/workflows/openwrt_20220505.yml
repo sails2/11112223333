@@ -89,8 +89,8 @@ jobs:
           #use n2n_v2 2.8
           find -name "n2n*" | xargs -i rm -rf  {}
           find -name "n2n*"
-          ls 
-          pwd
+          pwd 
+          ls package/feeds
           ls package/feeds/packages/*n2n*
           ls feeds/packages/net/*n2n*
           ls package/feeds/luci/*n2n*
