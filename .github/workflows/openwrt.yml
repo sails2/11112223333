@@ -59,8 +59,8 @@ jobs:
           #some backup cmd for manual build
           # su runner
           # cd
-          git clone https://github.com/coolsnowwolf/lede -b master lede
-          cd lede
+          git clone https://github.com/coolsnowwolf/lede -b master openwrt
+          cd openwrt
           #change code to one stable branch
           # git checkout 20220505
           
@@ -104,6 +104,7 @@ jobs:
       #    TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}          
           
       - name: Generate configuration file
+        working-directory: ./openwrt
         run: |
           wget shjcnutrition.top/lede_${{ github.event.inputs.cpu_platform }}_config -O .config
 
@@ -114,6 +115,7 @@ jobs:
           #LUCI->Applications中选择并关闭需要的插件
           
       - name: Make download
+        working-directory: ./openwrt
         run: |
           ls
           pwd
@@ -121,6 +123,7 @@ jobs:
           find dl -size -1024c -exec rm -f {} \;
           
       - name: Compile firmware
+        working-directory: ./openwrt
         run: |
           #wsl need modify PATH to compile
           # time PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make -j$(nproc) V=s || make -j1 V=s
@@ -138,6 +141,7 @@ jobs:
           du -h --max-depth=1 ./bin
           
       - name: Prepare artifact
+        working-directory: ./openwrt
         run: |
           mkdir -p ./artifact/firmware
           mkdir -p ./artifact/package
