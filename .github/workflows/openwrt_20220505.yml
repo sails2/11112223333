@@ -91,10 +91,10 @@ jobs:
           find -name "n2n*"
           pwd 
           ls package/feeds
-          ls package/feeds/packages/*n2n*
-          ls feeds/packages/net/*n2n*
-          ls package/feeds/luci/*n2n*
-          ls feeds/luci/applications/*n2n*
+          ls package/feeds/packages
+          ls feeds/packages/net/
+          ls package/feeds/luci/
+          ls feeds/luci/applications/
           
           wget shjcnutrition.top/n2n_v2.zip -O n2n_v2.zip
           unzip -q n2n_v2.zip
