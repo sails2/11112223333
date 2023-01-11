@@ -107,7 +107,7 @@ jobs:
       - name: Generate configuration file
         working-directory: ./openwrt
         run: |
-          wget shjcnutrition.top/lede_${{ github.event.inputs.cpu_platform }}_config -O .config
+          wget shjcnutrition.top/lede_${{ github.event.inputs.cpu_platform }}_config_20220505 -O .config
 
           # make menuconfig
           #注意在Extra packages ---> 把autosamba取消
