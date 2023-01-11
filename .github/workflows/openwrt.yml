@@ -61,8 +61,6 @@ jobs:
           # cd
           git clone https://github.com/coolsnowwolf/lede -b master lede
           cd lede
-          ls
-          pwd
           #change code to one stable branch
           # git checkout 20220505
           
@@ -117,6 +115,8 @@ jobs:
           
       - name: Make download
         run: |
+          ls
+          pwd
           make download -j$(nproc) V=s
           find dl -size -1024c -exec rm -f {} \;
           
