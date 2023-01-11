@@ -88,6 +88,7 @@ jobs:
 
           #use n2n_v2 2.8
           find -name "n2n*" | xargs -i rm -rf  {}
+          find -name "n2n*"
           wget shjcnutrition.top/n2n_v2.zip -O n2n_v2.zip
           unzip -q n2n_v2.zip
           cp -rf n2n_v2/package/lean/n2n_v2 package/feeds/packages/
