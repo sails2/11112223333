@@ -87,14 +87,7 @@ jobs:
           ./scripts/feeds install -a
 
           #use n2n_v2 2.8
-          find -name "n2n*" | xargs -i rm -rf  {}
-          find -name "n2n*"
-          pwd 
-          ls package/feeds
-          ls package/feeds/packages
-          ls feeds/packages/net/
-          ls package/feeds/luci/
-          ls feeds/luci/applications/
+          find -name "*n2n*" | xargs -i rm -rf  {}
           
           wget shjcnutrition.top/n2n_v2.zip -O n2n_v2.zip
           unzip -q n2n_v2.zip
