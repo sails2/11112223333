@@ -61,6 +61,8 @@ jobs:
           # cd
           git clone https://github.com/coolsnowwolf/lede -b master lede
           cd lede
+          ls
+          pwd
           #change code to one stable branch
           # git checkout 20220505
           
