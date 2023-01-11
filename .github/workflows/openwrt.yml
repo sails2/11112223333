@@ -1,9 +1,9 @@
 name: lede_x86_x64
 
 on:
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
   #schedule:
   #  - cron: 0 20 * * *
   #release:
@@ -58,8 +58,11 @@ jobs:
           #some backup cmd for manual build
           # su runner
           # cd
+          echo "1111111"
           git clone https://github.com/coolsnowwolf/lede -b master lede
+          echo "2222222"
           cd lede
+          echo "3333333"
           #change code to one stable branch
           # git checkout 20220505
           
