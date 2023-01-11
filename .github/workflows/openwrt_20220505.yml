@@ -1,4 +1,4 @@
-name: lede_x86_x64
+name: lede_x86_x64_20220505
 
 on:
   #push:
