@@ -85,6 +85,10 @@ jobs:
           
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          
+          #解决报错 dns.go
+          rm -rf feeds/packages/lang/golang/golang
+          svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang/golang feeds/packages/lang/golang/golang
 
           #use n2n_v2 2.8
           find -name "*n2n*" | xargs -i rm -rf  {}
