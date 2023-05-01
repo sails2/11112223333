@@ -89,7 +89,7 @@ jobs:
           #解决报错 dns.go
           rm -rf feeds/packages/lang/golang/golang
           svn co https://github.com/openwrt/packages/branches/openwrt-22.03/lang/golang/golang feeds/packages/lang/golang/golang
-
+          
           #use n2n_v2 2.8
           find -name "*n2n*" | xargs -i rm -rf  {}
           
@@ -118,6 +118,8 @@ jobs:
           #在选择插件的那里把luci-app-samba取消，选择luci-app-samba4
           #在Network ---> 把 samba36-server取消
           #LUCI->Applications中选择并关闭需要的插件
+          
+          #编译easymesh 报错 apd 关闭 network -> wirelessAPD -> wpd
           
       - name: Make download
         working-directory: ./openwrt
